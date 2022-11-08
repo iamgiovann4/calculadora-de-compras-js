@@ -47,12 +47,12 @@ body{
 
 .num3 {
     margin-right: 5px;
-    overflow: scroll;
+    overflow-y: scroll;
 
 }
 
 .num4 {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 fieldset{
