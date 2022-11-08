@@ -5,14 +5,17 @@ function cadastrarPessoas() {
     var cadastroP = new Array();
 
     var iNome = document.getElementById('name');
+    var iTelefone = document.getElementById('phone');
     var iChild = document.getElementById('kids');
      
     cadastroP.nome = iNome.value;
+    cadastroP.telefone = iTelefone.value;
     cadastroP.qtdChild = iChild.value;
 
     novoP.push(cadastroP); // o array de dentro da função irá ser empurrado para o array fora da função.
     console.log(novoP);
-y(); //função y
+
+    y(); //função y
     x(); //função x
     
     iNome.value="";
@@ -47,8 +50,6 @@ function cadastrarIngredientes() {
 function x() {
     var corpoTabela1 = document.getElementById("corpoTabela1");
     corpoTabela1.innerHTML=""; //O corpo tabela 1 irá receber um texto.
-
-   
 
     for (var i = 0; i < novoP.length; i++) {
         
@@ -121,21 +122,15 @@ function z() {
             trIngredientes.appendChild(tdNomeIng);
 
         for (var j = 0; j < novoP.length; j++) {
-            
 
             var cadastroP = novoP[j];
             
-            
-            
-
             var contaFinal = (parseFloat(cadastroI.qtdA) + (parseFloat(cadastroI.qtdC)* parseFloat(cadastroP.qtdChild)) + ' g');
             
             tdQuantidade.innerText = contaFinal;
             trIngredientes.appendChild(tdQuantidade);
             
             corpoTabela3.appendChild(trIngredientes);
-        }
-        
-        
+        }    
     }
 }
